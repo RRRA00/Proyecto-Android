@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Tienda Virtual Proyecto </string>
+
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+    <string name="tipoVendedor">Vendedor</string>
+    <string name="tipoCliente">Cliente</string>
+
+    <!--NavigationDrawer Vendedor-->
+    <string name="op_inicio_v">Inicio</string>
+    <string name="op_mi_tienda_v">Mi tienda</string>
+    <string name="op_categorias_v">Categorias</string>
+    <string name="op_resenia_v">Reseñas</string>
+    <string name="op_cerrar_sesion_v">Cerrar Sesión</string>
+    <!--NavigationDrawer Cliente-->
+    <string name="op_inicio_c">Inicio</string>
+    <string name="op_mi_perfil_c">Mi Perfil</string>
+    <string name="op_cerrar_sesion_c">Cerrar sesión</string>
+
+    <!--Bottom Navigaation Bar Vendedor-->
+    <string name="op_mis_productos_v">Mis productos</string>
+    <string name="op_mis_ordenes_v">Ordenes</string>
+
+    <!--Bottom Navigaation Bar Cliente-->
+    <string name="op_tienda_c">Tienda</string>
+    <string name="op_mis_ordenes_c">Mis órdenes</string>
+
+    <string name="txt_bienvenida">Bienvenido(a)</string>
+
+    <!--Registro de vendedor-->
+    <string name="txtRegistroV">Registro de Vendedor</string>
+    <string name="etNombresV">Nombres Completos</string>
+    <string name="etEmail">Email</string>
+    <string name="etPassword">Password</string>
+    <string name="etCPassword">Confirmar Password</string>
+    <string name="btnRegistrarV">Registrarme</string>
+
+    <!--Registro de Clientes-->
+    <string name="txtRegistroC">Registro de cliente</string>
+    <string name="etNombresC">Nombres completos</string>
+    <string name="btnRegistrarC">Registrarme</string>
+
+    <!-- Login de Vendedor -->
+    <string name="txtLoginV">Login de vendedor</string>
+    <string name="btnLoginV">Ingresar</string>
+    <string name="txtNoCuenta">¿No tienes una cuenta?</string>
+    <string name="tvRegistrarV">Registrarme</string>
+    <!-- Login de Cliente -->
+    <string name="txtLoginC">Login de cliente</string>
+    <string name="btnloginC">Ingresar</string>
+    <string name="tvRegistrarC">Registrarme</string>
+
+    <!-- Productos -->
+    <string name="txtAgregarProductos">Agregar productos</string>
+    <string name="etNombresP">Nombres del producto</string>
+    <string name="etDescripcionP">Descripción</string>
+    <string name="Categoria">Categoría</string>
+    <string name="etPrecioP">Precio</string>
+    <string name="txtDescuento">Descuento</string>
+    <string name="etPrecioConDescuentoP">Precio con descuento apli.</string>
+    <string name="etNotaDescuentoP">Ejm:10% Desc.</string>
+    <string name="btnAgregarProducto">Agregar producto</string>
+
+    <!-- Agregar Categorias -->
+    <string name="etCategoria">Ingrese categoria</string>
+    <string name="btnAgregarCat">Agregar categoria</string>
+    <!-- Item categoria - v -->
+    <string name="item_nombre_c_v">Nombre de categoria</string>
+    <!-- Item producto - v -->
+    <string name="item_nombre_p">Nombre del producto</string>
+    <string name="item_nota_p">50% off</string>
+    <string name="item_precio_p">00</string>
+    <string name ="item_presio_p_desc">00</string>
+    
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
