@@ -52,6 +52,16 @@ dependencies {
     implementation(libs.imagePicker)/*Recortar IMG */
     implementation(libs.glide)/*Leer imagenes */
     implementation(libs.storage)/*subir archibos multimedia */
+    implementation(libs.authGoogle) /*Iniciar sesión con google*/
+    implementation(libs.ccp) /*Seleccionar nuestro código telefónico por país*/
+    implementation(libs.circleImage)
+    implementation(libs.photoView)
+    implementation(libs.maps)
+    implementation(libs.places)
+    implementation(libs.retrofit)
+    implementation(libs.converterGson)
+    implementation(libs.okhttp3)
+    implementation(libs.browser)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:maxLines="1"/>
+
         <!--Nota del descuento-->
         <TextView
             android:id="@+id/item_nota_p"
@@ -46,8 +47,8 @@
             android:maxLines="1"/>
         <!--Precio con descuento del Producto-->
         <TextView
-            android:id="@+id/item_presio_p_desc"
-            android:text="@string/item_presio_p_desc"
+            android:id="@+id/item_precio_p_desc"
+            android:text="@string/item_precio_p_desc"
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

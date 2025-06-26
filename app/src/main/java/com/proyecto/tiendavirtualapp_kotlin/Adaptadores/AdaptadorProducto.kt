@@ -43,7 +43,7 @@ class AdaptadorProducto : RecyclerView.Adapter<AdaptadorProducto.HolderProducto>
 
         cargarPrimeraImg(modeloProducto, holder)
         holder.item_nombre_p.text = "${nombre}"
-        holder.item_precio_p.text = "${precio} ${"USD"}"
+        holder.item_precio_p.text = "${precio} ${"PEN"}"
         holder.item_precio_p_desc.text = "${precioDesc}"
         holder.item_nota_p.text = "${notaDesc}"
         //si el presio don descuneto y la nota no son campos vacios
@@ -67,7 +67,7 @@ class AdaptadorProducto : RecyclerView.Adapter<AdaptadorProducto.HolderProducto>
 
                         //Seteamos la informacion
                         holder.item_nota_p.text = "${nota_Desc}"
-                        holder.item_precio_p_desc.text = "${precio_Desc} ${"USD"}"
+                        holder.item_precio_p_desc.text = "${precio_Desc} ${"PEN"}"
                     }
                 }
             }
@@ -109,7 +109,7 @@ class AdaptadorProducto : RecyclerView.Adapter<AdaptadorProducto.HolderProducto>
         var imagenP = binding.imagenP
         var item_nombre_p = binding.itemNombreP
         var item_precio_p = binding.itemPrecioP
-        var item_precio_p_desc = binding.itemPresioPDesc
+        var item_precio_p_desc = binding.itemPrecioPDesc
         var item_nota_p = binding.itemNotaP
     }
 
