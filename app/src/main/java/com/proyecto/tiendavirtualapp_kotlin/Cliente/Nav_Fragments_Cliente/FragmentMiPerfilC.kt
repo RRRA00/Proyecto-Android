@@ -34,7 +34,6 @@ class FragmentMiPerfilC : Fragment() {
         cargarDatosUsuario()
 
         binding.btnEditarPerfil.setOnClickListener {
-            // Aquí puedes agregar la funcionalidad para editar el perfil
             Toast.makeText(context, "Función de editar perfil próximamente", Toast.LENGTH_SHORT).show()
         }
 
