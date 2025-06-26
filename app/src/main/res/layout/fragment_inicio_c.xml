@@ -5,10 +5,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Cliente.Nav_Fragments_Cliente.FragmentInicioC">
+
     <FrameLayout
         android:id="@+id/bottomFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"/>
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
@@ -16,18 +19,19 @@
         android:layout_gravity="bottom"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
-        app:fabCradleMargin="1dp"
+        app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="20dp">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@android:color/transparent"
-            android:elevation="0dp"
+            app:elevation="0dp"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/buttom_nav_bar_cliente_menu"/>
 
-    </com.google.android.material.bottomappbar.BottomAppBar>
 
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

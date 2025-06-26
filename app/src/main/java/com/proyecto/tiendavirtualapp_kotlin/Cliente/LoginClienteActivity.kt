@@ -63,9 +63,9 @@ class LoginClienteActivity : AppCompatActivity() {
             startActivity(Intent(this@LoginClienteActivity, RegistroClienteActivity::class.java))
         }
 
-        /*binding.tvRecuperarPass.setOnClickListener {
+        binding.tvRecuperarPass.setOnClickListener {
             startActivity(Intent(this@LoginClienteActivity, RecuperarPasswordActivity::class.java))
-        }*/
+        }
     }
 
 
@@ -166,8 +166,8 @@ class LoginClienteActivity : AppCompatActivity() {
         datosCliente["uid"] = "$uid"
         datosCliente["nombres"] = "$nombreC"
         datosCliente["email"] = "$emailC"
-        //datosCliente["telefono"] = ""
-        //datosCliente["dni"] = ""
+        datosCliente["telefono"] = ""
+        datosCliente["dni"] = ""
         datosCliente["proveedor"] = "google"
         datosCliente["tRegistro"] = "$tiempoRegistro"
         datosCliente["imagen"] = ""

@@ -1,6 +1,7 @@
 package com.proyecto.tiendavirtualapp_kotlin.Modelos
 
 class ModeloProducto {
+
     var id : String = ""
     var nombre : String = ""
     var descripcion : String = ""
@@ -8,8 +9,10 @@ class ModeloProducto {
     var precio : String = ""
     var precioDesc : String = ""
     var notaDesc : String = ""
+    var favorito = false
 
     constructor()
+
     constructor(
         id: String,
         nombre: String,
@@ -17,7 +20,8 @@ class ModeloProducto {
         categoria: String,
         precio: String,
         precioDesc: String,
-        notaDesc: String
+        notaDesc: String,
+        favorito : Boolean
     ) {
         this.id = id
         this.nombre = nombre
@@ -26,6 +30,7 @@ class ModeloProducto {
         this.precio = precio
         this.precioDesc = precioDesc
         this.notaDesc = notaDesc
+        this.favorito = favorito
     }
 
 
