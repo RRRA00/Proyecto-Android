@@ -25,7 +25,7 @@ class RegistroVendedorActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Esper por favor")
+        progressDialog.setTitle("Espere por favor")
         progressDialog.setCanceledOnTouchOutside(false)
 
         binding.btnRegistrarV.setOnClickListener{

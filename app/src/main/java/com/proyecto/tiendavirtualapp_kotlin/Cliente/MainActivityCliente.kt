@@ -3,15 +3,19 @@ package com.proyecto.tiendavirtualapp_kotlin.Cliente
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.proyecto.tiendavirtualapp_kotlin.Cliente.Bottom_Nav_Fragments_Cliente.FragmentMisOrdenesC
 import com.proyecto.tiendavirtualapp_kotlin.Cliente.Bottom_Nav_Fragments_Cliente.FragmentTiendaC
 import com.proyecto.tiendavirtualapp_kotlin.Cliente.Nav_Fragments_Cliente.FragmentInicioC
@@ -45,12 +49,48 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
 
         firebaseAuth = FirebaseAuth.getInstance()
         comprobarSesion()
+        cargarNombreUsuario()
 
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        
+
         repleaceFragment(FragmentInicioC())
     }
+
+    private fun cargarNombreUsuario() {
+        val uid = firebaseAuth?.uid
+        if (uid != null) {
+            val ref = FirebaseDatabase.getInstance().getReference("Usuarios")
+            ref.child(uid).addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        val nombres = "${snapshot.child("nombres").value}"
+                        val primerNombre = if (nombres.isNotEmpty() && nombres != "null") {
+                            nombres.split(" ").firstOrNull() ?: ""
+                        } else {
+                            ""
+                        }
+
+                        val headerView = binding.navigationView.getHeaderView(0)
+                        val tvBienvenida = headerView.findViewById<TextView>(R.id.tv_bienvenida_usuario)
+
+                        if (primerNombre.isNotEmpty()) {
+                            tvBienvenida.text = "Bienvenido(a) $primerNombre"
+                        } else {
+                            tvBienvenida.text = "Bienvenido(a)"
+                        }
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    val headerView = binding.navigationView.getHeaderView(0)
+                    val tvBienvenida = headerView.findViewById<TextView>(R.id.tv_bienvenida_usuario)
+                    tvBienvenida.text = "Bienvenido(a)"
+                }
+            })
+        }
+    }
+
     private fun comprobarSesion(){
         if(firebaseAuth!!.currentUser == null){
             startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))
