@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "738084201802",
-    "firebase_url": "https://tienda-virtual-6e07d-default-rtdb.firebaseio.com",
-    "project_id": "tienda-virtual-6e07d",
-    "storage_bucket": "tienda-virtual-6e07d.firebasestorage.app"
+    "project_number": "290368633445",
+    "project_id": "panaderia-f1ad9",
+    "storage_bucket": "panaderia-f1ad9.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:738084201802:android:3ac0e67086c6e83e378db3",
+        "mobilesdk_app_id": "1:290368633445:android:a38b8fb810c5be2525e48c",
         "android_client_info": {
-          "package_name": "com.proyecto.tiendavirtualapp_kotlin"
+          "package_name": "com.dinocode.tiendavirtualapp_kotlin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "738084201802-bscg4jjl81cqh788ivqlq07ggfsu3bug.apps.googleusercontent.com",
+          "client_id": "290368633445-uhc35k8cgpl57984t3atkrm07j8vv045.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.proyecto.tiendavirtualapp_kotlin",
+            "package_name": "com.dinocode.tiendavirtualapp_kotlin",
             "certificate_hash": "de3554d2b95161c638266173dbe7a93d9a479aaa"
           }
         },
         {
-          "client_id": "738084201802-rbtfi2jleivnq5i65qpl51repgdv5645.apps.googleusercontent.com",
+          "client_id": "290368633445-q21tmrujkcin73u6rl1asupsech6vnr2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBgdxaSsW2pVjXJ5N1ChwQ7lsKlYtXDwao"
+          "current_key": "AIzaSyDfnhxy_lm_KYtK7MqDJB73oLM3Pb3lGYI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "738084201802-rbtfi2jleivnq5i65qpl51repgdv5645.apps.googleusercontent.com",
+              "client_id": "290368633445-q21tmrujkcin73u6rl1asupsech6vnr2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

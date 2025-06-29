@@ -1,7 +1,8 @@
 <resources>
-    <string name="default_web_client_id">default_web_client_id</string>
-    <string name="mi_google_maps_api_key">mi_google_maps_api_key</string>
-    <string name="app_name">Tienda Virtual Proyecto </string>
+    <string name="app_name">Tienda Virtual Panaderia </string>
+
+    <string name="default_web_client_id">290368633445-q21tmrujkcin73u6rl1asupsech6vnr2.apps.googleusercontent.com</string>
+    <string name="mi_google_maps_api_key">AIzaSyBnTGpLRO5FVxYKs8CxLT14XQh1wFt8eEo</string>
 
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>

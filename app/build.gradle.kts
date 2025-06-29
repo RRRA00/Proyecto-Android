@@ -1,17 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.googleService)
 }
 
 android {
-    namespace = "com.proyecto.tiendavirtualapp_kotlin"
-    compileSdk = 35
+    namespace = "com.dinocode.tiendavirtualapp_kotlin"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.proyecto.tiendavirtualapp_kotlin"
+        applicationId = "com.dinocode.tiendavirtualapp_kotlin"
         minSdk = 23
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -28,30 +28,30 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
+
     buildFeatures{
         viewBinding = true
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.lottie)/*Animaciones*/
-    implementation(libs.firebaseAuth)/*Autetenticasion con Firebase*/
-    implementation(libs.firebaseDatabase)/*Base de datos con Firebase*/
-    implementation(libs.imagePicker)/*Recortar IMG */
-    implementation(libs.glide)/*Leer imagenes */
-    implementation(libs.storage)/*subir archibos multimedia */
+    implementation(libs.lottie) /*Animaciones*/
+    implementation(libs.firebaseAuth) /*Autenticación con Firebase*/
+    implementation(libs.firebaseDatabase) /*Base de datos con Firebase*/
+    implementation(libs.imagePicker) /*Recortar una imagen*/
+    implementation(libs.glide) /*Leer imágenes*/
+    implementation(libs.storage)/*Subir archivos multimedia*/
     implementation(libs.authGoogle) /*Iniciar sesión con google*/
     implementation(libs.ccp) /*Seleccionar nuestro código telefónico por país*/
     implementation(libs.circleImage)

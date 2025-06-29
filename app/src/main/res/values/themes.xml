@@ -5,5 +5,5 @@
         <item name="colorPrimary">@color/celeste_oscuro</item>
     </style>
 
-    <style name="Theme.TiendaVirtualAppKotlin" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.TiendaVirtualAppKotlin" parent="Base.Theme.TiendaVirtualAppKotlin" />
 </resources>

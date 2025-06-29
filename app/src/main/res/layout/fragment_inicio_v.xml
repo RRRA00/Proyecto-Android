@@ -30,7 +30,7 @@
             android:backgroundTint="@android:color/transparent"
             android:elevation="0dp"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/buttom_nav_bar_vendedor_menu"/>
+            app:menu="@menu/bottom_nav_bar_vendedor_menu"/>
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 

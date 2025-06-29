@@ -16,10 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven ( url ="https://jitpack.io" )
+        maven (url = "https://jitpack.io")
     }
 }
 
 rootProject.name = "Tienda Virtual App - Kotlin"
 include(":app")
- 
