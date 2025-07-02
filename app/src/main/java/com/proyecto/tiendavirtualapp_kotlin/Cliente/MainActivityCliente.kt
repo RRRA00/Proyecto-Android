@@ -13,10 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.google.android.material.navigation.NavigationView
-import com.google.firebase.auth.FirebaseAuth
-import com.proyecto.tiendavirtualapp_kotlin.Cliente.Bottom_Nav_Fragments_Cliente.FragmentMisOrdenesC
-import com.proyecto.tiendavirtualapp_kotlin.Cliente.Bottom_Nav_Fragments_Cliente.FragmentTiendaC
 import com.proyecto.tiendavirtualapp_kotlin.Cliente.Nav_Fragments_Cliente.FragmentInicioC
 import com.proyecto.tiendavirtualapp_kotlin.Cliente.Nav_Fragments_Cliente.FragmentMiPerfilC
 import com.proyecto.tiendavirtualapp_kotlin.R
@@ -71,14 +67,12 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
             R.string.close_drawer
         )
 
-        firebaseAuth = FirebaseAuth.getInstance()
-        comprobarSesion()
-
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
         repleaceFragment(FragmentInicioC())
     }
+
     private fun comprobarSesion(){
         if (firebaseAuth!!.currentUser==null){
             startActivity(Intent(this@MainActivityCliente, SeleccionarTipoActivity::class.java))

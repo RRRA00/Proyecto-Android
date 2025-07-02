@@ -5,19 +5,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.proyecto.tiendavirtualapp_kotlin.Constantes
+import com.proyecto.tiendavirtualapp_kotlin.databinding.ActivityLoginTelBinding
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.PhoneAuthProvider.ForceResendingToken
+import com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks
 import com.google.firebase.database.FirebaseDatabase
-import com.proyecto.tiendavirtualapp_kotlin.Constantes
-import com.proyecto.tiendavirtualapp_kotlin.R
-import com.proyecto.tiendavirtualapp_kotlin.databinding.ActivityLoginTelBinding
 import java.util.concurrent.TimeUnit
 
 class LoginTelActivity : AppCompatActivity() {
@@ -26,8 +24,8 @@ class LoginTelActivity : AppCompatActivity() {
     private lateinit var progressDialog : ProgressDialog
     private lateinit var firebaseAuth: FirebaseAuth
 
-    private var forceResendingToken : PhoneAuthProvider.ForceResendingToken?=null
-    private lateinit var mCallback : PhoneAuthProvider.OnVerificationStateChangedCallbacks
+    private var forceResendingToken : ForceResendingToken?=null
+    private lateinit var mCallback : OnVerificationStateChangedCallbacks
     private var mVerification : String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -181,8 +179,8 @@ class LoginTelActivity : AppCompatActivity() {
     }
 
     private fun phoneLoginCallbacks() {
-        mCallback = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
-            override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
+        mCallback = object : OnVerificationStateChangedCallbacks(){
+            override fun onCodeSent(verificationId: String, token: ForceResendingToken) {
                 mVerification = verificationId
                 forceResendingToken = token
 

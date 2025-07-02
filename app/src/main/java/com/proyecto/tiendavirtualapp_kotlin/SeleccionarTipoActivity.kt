@@ -9,18 +9,22 @@ import com.proyecto.tiendavirtualapp_kotlin.Vendedor.LoginVendedorActivity
 import com.proyecto.tiendavirtualapp_kotlin.databinding.ActivitySeleccionarTipoBinding
 
 class SeleccionarTipoActivity : AppCompatActivity() {
+
     private lateinit var binding : ActivitySeleccionarTipoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySeleccionarTipoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*Iniciar sesión con vendedor*/
         binding.tipoVendedor.setOnClickListener {
-            startActivity(Intent(this@SeleccionarTipoActivity,LoginVendedorActivity::class.java))
+            startActivity(Intent(this@SeleccionarTipoActivity, LoginVendedorActivity::class.java))
         }
 
+        /*Iniciar sesión con cliente*/
         binding.tipoCliente.setOnClickListener {
-            startActivity(Intent(this@SeleccionarTipoActivity,LoginClienteActivity::class.java))
+            startActivity(Intent(this@SeleccionarTipoActivity, LoginClienteActivity::class.java))
         }
     }
 }

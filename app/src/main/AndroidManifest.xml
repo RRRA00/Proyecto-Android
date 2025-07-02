@@ -5,6 +5,9 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -12,6 +15,10 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +29,44 @@
         android:roundIcon="@mipmap/tienda_icono_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaVirtualAppKotlin"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Vendedor.ListaClientes.ListaClientesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Calificacion.MostrarCalificacionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Calificacion.CalificarProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vendedor.Productos.ProductosCatVActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vendedor.Orden.DetalleOrdenVActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Cliente.Pago.PagoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Cliente.Orden.DetalleOrdenCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Cliente.ActualizarPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Cliente.RecuperarPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mapas.SeleccionarUbicacionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleProducto.DetalleProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Cliente.ProductosC.ProductosCatCActivity"
+            android:exported="false" />
         <activity
             android:name=".Cliente.LoginTelActivity"
             android:exported="false" />
@@ -46,8 +90,7 @@
             android:exported="false" />
         <activity
             android:name=".Vendedor.MainActivityVendedor"
-            android:exported="false"
-            android:theme="@style/Theme.TiendaVirtualAppKotlin" />
+            android:exported="false" />
         <activity
             android:name=".Cliente.EditarPerfilActivity"
             android:exported="false" />
@@ -63,6 +106,10 @@
         <activity
             android:name=".Cliente.MainActivityCliente"
             android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/mi_google_maps_api_key" />
     </application>
 
 </manifest>
