@@ -1,40 +1,37 @@
 package com.proyecto.tiendavirtualapp_kotlin.Modelos
 
 class ModeloUsuario {
-
-    var uid : String = ""
-    var tipoUsuario : String = ""
-    var email : String = ""
-    var nombres : String = ""
-    var dni : String = ""
-    var proveedor : String = ""
-    var telefono : String = ""
-    var direccion : String = ""
-    var imagen : String = ""
+    var uid: String = ""
+    var nombres: String = ""
+    var email: String = ""
+    var telefono: String = ""
+    var dni: String = ""
+    var proveedor: String = ""
+    var tRegistro: String = ""
+    var imagen: String = ""
+    var tipoUsuario: String = ""
 
     constructor()
 
     constructor(
         uid: String,
-        tipoUsuario: String,
-        email: String,
         nombres: String,
+        email: String,
+        telefono: String,
         dni: String,
         proveedor: String,
-        telefono: String,
-        direccion: String,
-        imagen: String
+        tRegistro: String,
+        imagen: String,
+        tipoUsuario: String
     ) {
         this.uid = uid
-        this.tipoUsuario = tipoUsuario
-        this.email = email
         this.nombres = nombres
+        this.email = email
+        this.telefono = telefono
         this.dni = dni
         this.proveedor = proveedor
-        this.telefono = telefono
-        this.direccion = direccion
+        this.tRegistro = tRegistro
         this.imagen = imagen
+        this.tipoUsuario = tipoUsuario
     }
-
-
 }

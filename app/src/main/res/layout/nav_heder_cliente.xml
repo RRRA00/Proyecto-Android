@@ -10,11 +10,12 @@
     android:paddingBottom="15dp"
     android:background="@color/azul_marino_oscuro">
     <TextView
+        android:id="@+id/tv_bienvenida_usuario"
         android:text="@string/txt_bienvenida"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

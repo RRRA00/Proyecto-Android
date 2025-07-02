@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -69,7 +70,7 @@ class MainActivityCliente : AppCompatActivity() , NavigationView.OnNavigationIte
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        replaceFragment(FragmentInicioC())
+        repleaceFragment(FragmentInicioC())
     }
 
     private fun comprobarSesion(){
