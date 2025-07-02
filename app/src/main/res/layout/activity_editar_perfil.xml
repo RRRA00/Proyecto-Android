@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Cliente.EditarPerfilActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center_vertical"
+      android:layout_marginBottom="24dp">
+
+      <ImageButton
+        android:id="@+id/btn_regresar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ico_regresar"
+        android:contentDescription="Regresar" />
+
+      <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Editar Perfil"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+      <View
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <!-- Card para editar perfil -->
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="12dp"
+      app:cardElevation="4dp"
+      android:layout_marginBottom="16dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Imagen de perfil -->
+        <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/iv_imagen_perfil"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginBottom="16dp"
+          android:src="@drawable/ic_person_24"
+          app:civ_border_width="2dp"
+          app:civ_border_color="@color/primary_color" />
+
+        <Button
+          android:id="@+id/btn_cambiar_imagen"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:text="Cambiar Imagen"
+          android:backgroundTint="@color/primary_color"
+          android:textColor="@android:color/white"
+          android:layout_marginBottom="24dp"
+          style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <!-- Campos editables -->
+
+        <!-- Nombres -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombres completos"
+            android:inputType="textPersonName|textCapWords"
+            android:drawableStart="@drawable/ico_nombres"
+            android:drawablePadding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Teléfono -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono (opcional)"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ico_telefono"
+            android:drawablePadding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- DNI -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_dni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DNI (opcional)"
+            android:inputType="number"
+            android:drawableStart="@drawable/ico_nombres"
+            android:drawablePadding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email (solo lectura) -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:drawableStart="@drawable/ico_email"
+            android:drawablePadding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botones -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center"
+      android:layout_marginTop="16dp">
+
+      <Button
+        android:id="@+id/btn_cancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:text="Cancelar"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+      <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:text="Guardar Cambios"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</ScrollView>

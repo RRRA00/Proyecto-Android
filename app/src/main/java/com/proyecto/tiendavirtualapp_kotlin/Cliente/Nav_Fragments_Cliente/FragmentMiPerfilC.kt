@@ -1,5 +1,6 @@
 package com.proyecto.tiendavirtualapp_kotlin.Cliente.Nav_Fragments_Cliente
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.proyecto.tiendavirtualapp_kotlin.Cliente.EditarPerfilActivity
 import com.proyecto.tiendavirtualapp_kotlin.Modelos.ModeloUsuario
 import com.proyecto.tiendavirtualapp_kotlin.R
 import com.proyecto.tiendavirtualapp_kotlin.databinding.FragmentMiPerfilCBinding
@@ -34,7 +36,8 @@ class FragmentMiPerfilC : Fragment() {
         cargarDatosUsuario()
 
         binding.btnEditarPerfil.setOnClickListener {
-            Toast.makeText(context, "Función de editar perfil próximamente", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, EditarPerfilActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root

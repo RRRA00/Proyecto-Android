@@ -49,6 +49,9 @@
             android:exported="false"
             android:theme="@style/Theme.TiendaVirtualAppKotlin" />
         <activity
+            android:name=".Cliente.EditarPerfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
