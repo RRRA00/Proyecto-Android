@@ -10,6 +10,7 @@ class ModeloUsuario {
     var tRegistro: String = ""
     var imagen: String = ""
     var tipoUsuario: String = ""
+    var direccion: String = ""
 
     constructor()
 
@@ -22,7 +23,8 @@ class ModeloUsuario {
         proveedor: String,
         tRegistro: String,
         imagen: String,
-        tipoUsuario: String
+        tipoUsuario: String,
+        direccion: String = ""
     ) {
         this.uid = uid
         this.nombres = nombres
@@ -33,5 +35,6 @@ class ModeloUsuario {
         this.tRegistro = tRegistro
         this.imagen = imagen
         this.tipoUsuario = tipoUsuario
+        this.direccion = direccion
     }
 }
